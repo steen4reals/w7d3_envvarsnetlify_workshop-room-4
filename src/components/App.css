@@ -1,20 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Monoton&display=swap');
+
+body{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvVRrh8h4el99VS1Fu4FQ1NYcTWpebUz1Sfg&usqp=CAU");
+}
+
+.button{
+  z-index: 0;
+  color: white;
+  background-color: pink;
+  font-size: 20px;
+  font-family:'Courier New', Courier, monospace;
+  padding: 5px;
+  font-weight: bold;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.button:hover{
+  color: pink;
+  background-color: white;
+}
+
+p {
+  background-color: grey;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 .App {
   text-align: center;
+}
+
+h1 {
+  font-family: 'Monoton', cursive;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  z-index: 1;
+}
+
+.App-logo:hover{
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+  .App-logo:hover {
+    animation: App-logo-spin-opposite infinite 5s linear;
+  }
 }
 
 .App-header {
   background-color: #282c34;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +69,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvVRrh8h4el99VS1Fu4FQ1NYcTWpebUz1Sfg&usqp=CAU");
+}
+
+.App-header, p, h1{
+  z-index: 2;
+
 }
 
 .App-link {
@@ -34,5 +87,15 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+@keyframes App-logo-spin-opposite {
+  from {
+    transform: scale(2);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
